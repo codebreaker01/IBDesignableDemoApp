@@ -53,7 +53,7 @@ class DesignableButton: UIButton {
     func drawButtonWithFrame(frame: CGRect, cornerRadius: CGFloat, strokeWidth: CGFloat, fillColor: UIColor, strokeColor: UIColor) {
         
         //// Rectangle Drawing
-        let rectanglePath = UIBezierPath(roundedRect: CGRectMake(frame.minX + 2, frame.minY + 2, floor((frame.width - 2) * 0.97297 + 0.5), floor((frame.height - 2) * 0.85714 + 0.5)), cornerRadius: cornerRadius)
+        let rectanglePath = UIBezierPath(roundedRect: CGRectMake(frame.minX + 2.0, frame.minY + 2.0, CGFloat(floor(Double((frame.width - 2) * 0.97297 + 0.5))), CGFloat(floor(Double((frame.height - 2) * 0.85714 + 0.5)))), cornerRadius: cornerRadius)
         fillColor.setFill()
         rectanglePath.fill()
         strokeColor.setStroke()
